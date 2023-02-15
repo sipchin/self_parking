@@ -4,7 +4,8 @@
   <param name ="/use_sim_time" value="false"/>		
 	<arg name="gui" default="True" />
 	<param name="use_gui" value="$(arg gui)"/>
-  
+  <arg default="$(find rur_detailed_description)/rviz/urdf.rviz" name="rvizconfig"/>
+
   <arg name="model" default="$(find robot_description_description)/urdf/robot_description.xacro"/>
   <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
 
@@ -13,8 +14,9 @@
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   
   <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+
+  <node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/>
   
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find code)/config/rviz_config.rviz"/>
 
   
 </launch>
