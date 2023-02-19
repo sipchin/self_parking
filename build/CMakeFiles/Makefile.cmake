@@ -27,6 +27,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "robot_description_description/catkin_generated/package.cmake"
   "rplidar_ros/catkin_generated/ordered_paths.cmake"
   "rplidar_ros/catkin_generated/package.cmake"
+  "ugv/catkin_generated/ordered_paths.cmake"
+  "ugv/catkin_generated/package.cmake"
   "/home/sipc/self_parking/devel/share/rur_description/cmake/rur_descriptionConfig-version.cmake"
   "/home/sipc/self_parking/devel/share/rur_description/cmake/rur_descriptionConfig.cmake"
   "/home/sipc/self_parking/src/CMakeLists.txt"
@@ -47,6 +49,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/sipc/self_parking/src/robot_description_description/package.xml"
   "/home/sipc/self_parking/src/rplidar_ros/CMakeLists.txt"
   "/home/sipc/self_parking/src/rplidar_ros/package.xml"
+  "/home/sipc/self_parking/src/ugv/CMakeLists.txt"
+  "/home/sipc/self_parking/src/ugv/package.xml"
   "/opt/ros/noetic/share/actionlib/cmake/actionlib-msg-extras.cmake"
   "/opt/ros/noetic/share/actionlib/cmake/actionlibConfig-version.cmake"
   "/opt/ros/noetic/share/actionlib/cmake/actionlibConfig.cmake"
@@ -475,6 +479,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "ReallyUsefulRobot/ROS/rur_description/CMakeFiles/CMakeDirectoryInformation.cmake"
   "ReallyUsefulRobot/ROS/rur/CMakeFiles/CMakeDirectoryInformation.cmake"
   "mobile_robot_autonomous_navigation/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "ugv/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -592,4 +597,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "mobile_robot_autonomous_navigation/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/DependInfo.cmake"
   "mobile_robot_autonomous_navigation/CMakeFiles/move_base_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "mobile_robot_autonomous_navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/DependInfo.cmake"
+  "ugv/CMakeFiles/UGVinterface.dir/DependInfo.cmake"
   )

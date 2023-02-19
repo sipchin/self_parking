@@ -202,3 +202,11 @@
 /home/sipc/self_parking/build/mobile_robot_autonomous_navigation/CMakeFiles/controller_manager_msgs_generate_messages_py.dir
 /home/sipc/self_parking/build/mobile_robot_autonomous_navigation/CMakeFiles/move_base_msgs_generate_messages_eus.dir
 /home/sipc/self_parking/build/mobile_robot_autonomous_navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir
+/home/sipc/self_parking/build/ugv/CMakeFiles/install/strip.dir
+/home/sipc/self_parking/build/ugv/CMakeFiles/install/local.dir
+/home/sipc/self_parking/build/ugv/CMakeFiles/install.dir
+/home/sipc/self_parking/build/ugv/CMakeFiles/list_install_components.dir
+/home/sipc/self_parking/build/ugv/CMakeFiles/rebuild_cache.dir
+/home/sipc/self_parking/build/ugv/CMakeFiles/edit_cache.dir
+/home/sipc/self_parking/build/ugv/CMakeFiles/test.dir
+/home/sipc/self_parking/build/ugv/CMakeFiles/UGVinterface.dir

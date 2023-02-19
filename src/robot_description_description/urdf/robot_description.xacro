@@ -1,9 +1,18 @@
 <?xml version="1.0" ?>
-<robot name="robot_description" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="diff_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+<!-- materials file -->
 <xacro:include filename="$(find robot_description_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find robot_description_description)/urdf/robot_description.trans" />
-<xacro:include filename="$(find robot_description_description)/urdf/robot_description.gazebo" />
+<!-- gazebo materials file -->
+<xacro:include filename="$(find robot_description_description)/gazebo/robot_description_gazebo_material.gazebo" />
+<!-- transfer -->
+<!-- <xacro:include filename="$(find robot_description_description)/urdf/robot_description.trans" /> -->
+<!-- plugin -->
+<xacro:include filename="$(find robot_description_description)/gazebo/robot_description_gazebo_plugin.gazebo" />
+<xacro:include filename="$(find robot_description_description)/gazebo/robot_description.gazebo" />
+ 
+
+<!-- link -->
 <link name="base_link">
   <inertial>
     <origin xyz="-0.0011345589802084692 1.669329030983392e-17 0.08093852385142532" rpy="0 0 0"/>
@@ -15,7 +24,7 @@
     <geometry>
       <mesh filename="package://robot_description_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="blue"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -36,7 +45,7 @@
     <geometry>
       <mesh filename="package://robot_description_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="blue"/>
   </visual>
   <collision>
     <origin xyz="0.09 -0.0 -0.141" rpy="0 0 0"/>
@@ -57,7 +66,7 @@
     <geometry>
       <mesh filename="package://robot_description_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="orange"/>
   </visual>
   <collision>
     <origin xyz="0.1 -0.097 -0.035" rpy="0 0 0"/>
@@ -78,7 +87,7 @@
     <geometry>
       <mesh filename="package://robot_description_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="orange"/>
   </visual>
   <collision>
     <origin xyz="0.1 0.097 -0.035" rpy="0 0 0"/>
@@ -88,20 +97,23 @@
   </collision>
 </link>
 
-<joint name="Rigid10" type="fixed">
+
+<!-- joint -->
+<joint name="to_lidar" type="fixed">
   <origin xyz="-0.09 0.0 0.141" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="lidar_1"/>
 </joint>
 
-<joint name="Rev11" type="continuous">
+<joint name="to_left_wheel" type="continuous">
+
   <origin xyz="-0.1 0.097 0.035" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="left_wheel_1"/>
   <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
-<joint name="Rev12" type="continuous">
+<joint name="to_right_wheel" type="continuous">
   <origin xyz="-0.1 -0.097 0.035" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="right_wheel_1"/>

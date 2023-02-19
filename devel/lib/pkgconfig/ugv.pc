@@ -1,0 +1,8 @@
+prefix=/home/sipc/self_parking/devel
+
+Name: ugv
+Description: Description of ugv
+Version: 1.0.0
+Cflags: -I/home/sipc/self_parking/src/ugv/include
+Libs: -L${prefix}/lib -lugv
+Requires: message_runtime tf

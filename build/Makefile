@@ -1636,6 +1636,19 @@ move_base_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f mobile_robot_autonomous_navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make mobile_robot_autonomous_navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
 .PHONY : move_base_msgs_generate_messages_lisp/fast
 
+#=============================================================================
+# Target rules for targets named UGVinterface
+
+# Build rule for target.
+UGVinterface: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 UGVinterface
+.PHONY : UGVinterface
+
+# fast build rule for target.
+UGVinterface/fast:
+	$(MAKE) -f ugv/CMakeFiles/UGVinterface.dir/build.make ugv/CMakeFiles/UGVinterface.dir/build
+.PHONY : UGVinterface/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1762,6 +1775,7 @@ help:
 	@echo "... controller_manager_msgs_generate_messages_py"
 	@echo "... move_base_msgs_generate_messages_eus"
 	@echo "... move_base_msgs_generate_messages_lisp"
+	@echo "... UGVinterface"
 .PHONY : help
 
 

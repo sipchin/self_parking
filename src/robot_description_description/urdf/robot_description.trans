@@ -1,26 +1,29 @@
 <?xml version="1.0" ?>
-<robot name="robot_description" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<robot name="diff_robot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<transmission name="Rev11_tran">
+<transmission name="to_left_wheel_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev11">
+  <joint name="to_left_wheel">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Rev11_actr">
+  <actuator name="to_left_wheel_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Rev12_tran">
+<transmission name="to_right_wheel_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev12">
+  <joint name="to_right_wheel">
+<!--     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface> -->
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Rev12_actr">
+  <actuator name="to_right_wheel_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
+<robotNamespace>/robot</robotNamespace>
 
 </robot>

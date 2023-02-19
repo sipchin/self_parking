@@ -140,6 +140,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/sipc/self_parking/build/ReallyUsefulRobot/ROS/rur_description/cmake_install.cmake")
   include("/home/sipc/self_parking/build/ReallyUsefulRobot/ROS/rur/cmake_install.cmake")
   include("/home/sipc/self_parking/build/mobile_robot_autonomous_navigation/cmake_install.cmake")
+  include("/home/sipc/self_parking/build/ugv/cmake_install.cmake")
 
 endif()
 
