@@ -1,0 +1,8 @@
+prefix=/home/sipc/self_parking/devel
+
+Name: sensor_msgs
+Description: Description of sensor_msgs
+Version: 1.11.10
+Cflags: -I/home/sipc/self_parking/devel/include -I/home/sipc/self_parking/src/lidar_bot/lidarbot_ws/src/sensor_msgs/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs message_runtime std_msgs
