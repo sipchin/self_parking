@@ -1,7 +1,7 @@
 <launch>
 
 	<!-- Run teleop -->
-    <include file="$(find lidarbot)/launch/lidarbot_teleop.launch"/>
+    <include file="$(find code)/launch/robot_teleop.launch"/>
 
 	<!-- Run lidar. -->
 <!-- <include file="$(find ydlidar_ros)/launch/lidar.launch"/> -->
@@ -118,11 +118,11 @@
 
 <!-- MOVEMENT -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find lidarbot)/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
-    <rosparam file="$(find lidarbot)/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find lidarbot)/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find lidarbot)/global_costmap_params.yaml" command="load" /> 
-    <rosparam file="$(find lidarbot)/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find code)/config/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+    <rosparam file="$(find code)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find code)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find code)/config/global_costmap_params.yaml" command="load" /> 
+    <rosparam file="$(find code)/config/base_local_planner_params.yaml" command="load" />
   </node>
 
 
