@@ -1,2 +1,2 @@
-ReallyUsefulRobot/ROS/rur:ReallyUsefulRobot/ROS/rur_description:ReallyUsefulRobot/ROS/rur_detailed_description:ReallyUsefulRobot/ROS/rur_gazebo:ReallyUsefulRobot/ROS/rur_navigation:code:mobile_robot_autonomous_navigation:robot_description_description:rplidar_ros:ugv
+ReallyUsefulRobot/ROS/rur:ReallyUsefulRobot/ROS/rur_description:ReallyUsefulRobot/ROS/rur_detailed_description:ReallyUsefulRobot/ROS/rur_gazebo:ReallyUsefulRobot/ROS/rur_navigation:code:mobile_robot_autonomous_navigation:robot_description:rplidar_ros:ugv
 -DCATKIN_DEVEL_PREFIX=/home/sipc/self_parking/devel -DCMAKE_INSTALL_PREFIX=/home/sipc/self_parking/install -G Unix Makefiles

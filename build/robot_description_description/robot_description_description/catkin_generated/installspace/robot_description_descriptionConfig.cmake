@@ -66,7 +66,7 @@ endif()
 set(robot_description_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
-if("TRUE" STREQUAL "TRUE")
+if("FALSE" STREQUAL "TRUE")
   set(robot_description_description_SOURCE_PREFIX /home/sipc/self_parking/src/robot_description_description/robot_description_description)
   set(robot_description_description_DEVEL_PREFIX /home/sipc/self_parking/devel)
   set(robot_description_description_INSTALL_PREFIX "")
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'robot_description_description' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'robot_description_description' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/sipc/self_parking/src/robot_description_description/robot_description_description/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'robot_description_description' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '\${prefix}/${idir}'.  ${_report}")
     endif()
     _list_append_unique(robot_description_description_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/sipc/self_parking/devel/lib;/home/sipc/self_parking/devel/lib;/home/sipc/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/sipc/self_parking/install/lib;/home/sipc/self_parking/devel/lib;/home/sipc/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

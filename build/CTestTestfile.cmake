@@ -7,7 +7,7 @@
 subdirs("gtest")
 subdirs("ReallyUsefulRobot/ROS/rur_navigation")
 subdirs("code")
-subdirs("robot_description_description")
+subdirs("robot_description")
 subdirs("ReallyUsefulRobot/ROS/rur_detailed_description")
 subdirs("rplidar_ros")
 subdirs("ReallyUsefulRobot/ROS/rur_gazebo")
